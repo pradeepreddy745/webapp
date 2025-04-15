@@ -8,7 +8,9 @@ const port = process.env.PORT || 3000;
 
 // Middleware
 app.use(express.urlencoded({ extended: true }));
-app.use(express.static('views'));
+// app.use(express.static('views'));
+app.use(express.static(path.join(__dirname, 'views')));
+
 
 // DB Config
 const dbConfig = {
